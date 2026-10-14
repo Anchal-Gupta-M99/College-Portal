@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart College Portal</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            height: 100vh;
+        }
+
+        .sidebar {
+            width: 240px;
+            background: #1e3155;
+            padding: 20px;
+            flex-shrink: 0;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            text-decoration: none;
+            padding: 12px;
+            margin-bottom: 8px;
+            border-radius: 6px;
+        }
+
+        .sidebar a:hover {
+            background: #365477;
+        }
+
+        iframe {
+            flex: 1;
+            width: 0;
+            height: 100%;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <aside class="sidebar">
+            <h2 style="color:white;">College Portal</h2>
+
+            <a href="dashboard.html" target="content">Dashboard</a>
+            <a href="attendance.html" target="content">Attendance</a>
+            <a href="timetable.html" target="content">Timetable</a>
+            <a href="assignments.html" target="content">Assignments</a>
+            <a href="notices.html" target="content">Notices</a>
+            <a href="events.html" target="content">Events</a>
+        </aside>
+
+        <iframe
+            name="content"
+            src="dashboard.html"
+            title="Portal content">
+        </iframe>
+
+    </div>
+
+</body>
+</html>
