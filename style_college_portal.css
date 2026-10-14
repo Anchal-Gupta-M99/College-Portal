@@ -270,4 +270,46 @@ h1{
     color: #1e3155;
 }
 
+/* Login page - Mobile responsive */
+@media (max-width: 600px) {
+    .login-container {
+        width: 90%;
+        max-width: 400px;
+        margin: 20px auto;
+        padding: 20px;
+    }
+
+    .login-container input,
+    .login-container button {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+/* Common mobile responsive CSS */
+@media (max-width: 600px) {
+    body {
+        margin: 0;
+        padding: 10px;
+    }
+
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    input,
+    select,
+    textarea,
+    button {
+        max-width: 100%;
+    }
+}
+
 
