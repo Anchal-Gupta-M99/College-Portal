@@ -167,14 +167,14 @@ a{
     .container {
         flex-direction: column;
     }
-/* 
+
     .sidebar {
         width: 100%;
     }
 
     .sidebar h2 {
         margin-bottom: 15px;
-    } */
+    }
 
     .main {
         padding: 20px;
