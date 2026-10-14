@@ -163,20 +163,25 @@ a{
 
 /* ===== SMALL SCREEN ===== */
 
-/* Phone aur chhoti screens */
-@media (max-width: 600px) {
+@media (max-width: 650px) {
     .container {
         flex-direction: column;
     }
-
+/* 
     .sidebar {
         width: 100%;
     }
 
-    iframe {
-        width: 100%;
-        flex: 1;
-        min-height: 70vh;
+    .sidebar h2 {
+        margin-bottom: 15px;
+    } */
+
+    .main {
+        padding: 20px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
     }
 }
 
@@ -270,7 +275,7 @@ h1{
     color: #1e3155;
 }
 
-/* Login page - Mobile responsive */
+/* Login page on mobile */
 @media (max-width: 600px) {
     .login-container {
         width: 90%;
@@ -278,38 +283,193 @@ h1{
         margin: 20px auto;
         padding: 20px;
     }
-
-    .login-container input,
-    .login-container button {
-        width: 100%;
-        max-width: 100%;
+}
+/* Dashboard cards on mobile */
+@media (max-width: 600px) {
+    .dashboard-cards {
+        grid-template-columns: 1fr;
     }
 }
-
-/* Common mobile responsive CSS */
+/* Sidebar on mobile */
 @media (max-width: 600px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+    }
+}
+/* Tables on mobile */
+@media (max-width: 600px) {
+    table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+}
+/* =================================
+   RESPONSIVE COLLEGE PORTAL
+   Phone, Tablet and Laptop
+================================= */
+
+/* All elements */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    margin: 0;
+    max-width: 100%;
+}
+
+/* Forms and buttons */
+input,
+select,
+textarea,
+button {
+    max-width: 100%;
+    font: inherit;
+}
+
+input,
+select,
+textarea {
+    min-width: 0;
+}
+
+/* Tables: Attendance and Timetable */
+table {
+    max-width: 100%;
+    border-collapse: collapse;
+}
+
+@media (max-width: 768px) {
+
+    /* Page spacing */
     body {
-        margin: 0;
         padding: 10px;
     }
 
+    /* Main containers */
+    .container,
+    .login-container,
+    .login-box,
+    .login-form,
+    .dashboard-container,
+    .main-content {
+        max-width: 100%;
+    }
+
+    /* Login form */
+    .login-container,
+    .login-box,
+    .login-form {
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 20px;
+    }
+
+    /* Form fields */
+    input,
+    select,
+    textarea {
+        width: 100%;
+    }
+
+    button {
+        max-width: 100%;
+    }
+
+    /* Dashboard cards */
+    .cards,
+    .card-container,
+    .dashboard-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    /* Images */
+    img {
+        height: auto;
+    }
+
+    /* Tables can scroll horizontally */
     table {
         display: block;
         width: 100%;
         overflow-x: auto;
     }
 
+    /* Headings */
+    h1 {
+        font-size: 26px;
+        overflow-wrap: break-word;
+    }
+
+    h2 {
+        font-size: 22px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+
+    body {
+        padding: 8px;
+    }
+
+    /* Dashboard cards become one column */
+    .cards,
+    .card-container,
+    .dashboard-cards {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    /* Login form */
+    .login-container,
+    .login-box,
+    .login-form {
+        padding: 15px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    p {
+        overflow-wrap: break-word;
+    }
+
+    /* Sidebar links */
+    .sidebar a {
+        overflow-wrap: break-word;
+    }
+}
+@media (max-width: 600px) {
+    table {
+        width: 100%;
+        table-layout: fixed;
+        border-collapse: collapse;
+    }
+
+    th,
+    td {
+        padding: 5px;
+        font-size: 12px;
+        white-space: normal;
+        overflow-wrap: anywhere;
+    }
+
     img {
         max-width: 100%;
         height: auto;
     }
-
-    input,
-    select,
-    textarea,
-    button {
-        max-width: 100%;
-    }
 }
-
-
