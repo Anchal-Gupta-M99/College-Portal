@@ -163,7 +163,8 @@ a{
 
 /* ===== SMALL SCREEN ===== */
 
-@media (max-width: 650px) {
+/* Phone aur chhoti screens */
+@media (max-width: 600px) {
     .container {
         flex-direction: column;
     }
@@ -172,16 +173,10 @@ a{
         width: 100%;
     }
 
-    .sidebar h2 {
-        margin-bottom: 15px;
-    }
-
-    .main {
-        padding: 20px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
+    iframe {
+        width: 100%;
+        flex: 1;
+        min-height: 70vh;
     }
 }
 
