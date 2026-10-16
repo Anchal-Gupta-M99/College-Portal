@@ -1,0 +1,494 @@
+/* =====================================
+   SMART COLLEGE PORTAL - MAIN CSS
+   Laptop, Tablet and Mobile
+===================================== */
+
+/* Reset */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    width: 100%;
+    min-height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 20px;
+    width: 100%;
+    max-width: 100%;
+    background-color: #f1f5f9;
+    font-family: Arial, sans-serif;
+    color: #263653;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Headings */
+h1 {
+    color: #1e3155;
+    overflow-wrap: break-word;
+}
+
+h2 {
+    color: #2d65dc;
+    overflow-wrap: break-word;
+}
+
+h3 {
+    color: #2d65dc;
+    overflow-wrap: break-word;
+}
+
+p {
+    overflow-wrap: break-word;
+}
+
+/* =====================================
+   LOGIN PAGE
+===================================== */
+
+header {
+    text-align: center;
+    margin: 30px 0;
+}
+
+header h1 {
+    color: #153778;
+    font-size: 42px;
+    margin-bottom: 10px;
+}
+
+header p {
+    color: #71819b;
+    font-size: 18px;
+    margin-top: 0;
+}
+
+main {
+    width: 100%;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+section {
+    background-color: white;
+    margin: 25px 0;
+    padding: 30px;
+    border: 1px solid #d5deeb;
+    border-radius: 12px;
+}
+
+section h2 {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+
+section > p:first-of-type {
+    text-align: center;
+    color: #71819b;
+    margin: 25px 0;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+input,
+select,
+textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-width: 0;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 9px;
+    font-size: 16px;
+    font-family: inherit;
+}
+
+button {
+    width: 100%;
+    max-width: 100%;
+    background-color: #3066df;
+    color: white;
+    padding: 14px;
+    border: none;
+    border-radius: 9px;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: inherit;
+    cursor: pointer;
+}
+
+section > p:last-child {
+    text-align: center;
+    margin-top: 25px;
+}
+
+a {
+    color: #3066df;
+    text-decoration: none;
+    overflow-wrap: break-word;
+}
+
+/* =====================================
+   DASHBOARD
+===================================== */
+
+.container {
+    display: flex;
+    width: 100%;
+    max-width: 100%;
+    min-height: 100vh;
+    background-color: #f1f5f9;
+    color: #263653;
+}
+
+/* Sidebar desktop */
+.sidebar {
+    width: 240px;
+    flex-shrink: 0;
+    padding: 20px;
+    background-color: #1e3155;
+}
+
+/* Sidebar links */
+.sidebar a {
+    display: block;
+    color: white;
+    text-decoration: none;
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 6px;
+    overflow-wrap: break-word;
+}
+
+.sidebar a:hover {
+    background-color: #365477;
+}
+
+.main {
+    flex: 1;
+    min-width: 0;
+    padding: 35px;
+}
+
+.main h1 {
+    color: #1e3155;
+    font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+/* Dashboard cards */
+.cards {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+    margin-bottom: 35px;
+}
+
+.card {
+    min-width: 0;
+    background-color: white;
+    padding: 22px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    overflow-wrap: break-word;
+}
+
+.card h3 {
+    color: #64748b;
+    font-size: 16px;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card p {
+    color: #2d65dc;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.main > h2 {
+    color: #1e3155;
+    font-size: 23px;
+    margin-bottom: 18px;
+}
+
+.class-box {
+    background-color: white;
+    padding: 12px 22px;
+    border: 1px solid #dbe3ef;
+    border-radius: 12px;
+    overflow-wrap: break-word;
+}
+
+.class-box p {
+    padding: 14px 0;
+    margin: 0;
+    border-bottom: 1px solid #e2e8f0;
+    color: #475569;
+}
+
+.class-box p:last-child {
+    border-bottom: none;
+}
+
+/* =====================================
+   ATTENDANCE, TIMETABLE AND ASSIGNMENTS
+===================================== */
+
+table {
+    width: 100%;
+    max-width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-color: white;
+}
+
+th {
+    background-color: #1e3155;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #dbe3ef;
+}
+
+td {
+    text-align: center;
+    padding: 12px;
+    border: 1px solid #dbe3ef;
+    color: #334155;
+    overflow-wrap: break-word;
+}
+
+/* Assignment and general content safety */
+.container > *,
+.main > * {
+    min-width: 0;
+    max-width: 100%;
+}
+
+/* =====================================
+   TABLET
+===================================== */
+
+@media (max-width: 768px) {
+    body {
+        padding: 14px;
+    }
+
+    .main {
+        padding: 20px;
+    }
+
+    .cards {
+        gap: 12px;
+    }
+
+    .card {
+        padding: 16px;
+    }
+
+    header {
+        margin: 25px 0;
+    }
+
+    header h1 {
+        font-size: 32px;
+    }
+
+    section {
+        padding: 22px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 14px;
+    }
+}
+
+/* =====================================
+   MOBILE PHONE
+===================================== */
+
+@media (max-width: 600px) {
+    body {
+        padding: 10px;
+    }
+
+    /* Sidebar moves above the page content */
+    .container {
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    .sidebar {
+        width: 100%;
+        padding: 10px;
+        flex-shrink: 1;
+    }
+
+    .sidebar h2 {
+        font-size: 20px;
+        margin: 8px 0;
+    }
+
+    /* Horizontal scrolling menu */
+    .sidebar a {
+        display: inline-block;
+        padding: 10px;
+        margin: 3px;
+        white-space: nowrap;
+    }
+
+    .main {
+        width: 100%;
+        padding: 12px 4px;
+    }
+
+    .main h1 {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+
+    /* Dashboard cards */
+    .cards {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 12px;
+    }
+
+    .card {
+        width: 100%;
+        padding: 16px;
+    }
+
+    .card p {
+        font-size: 24px;
+    }
+
+    /* Login page */
+    header {
+        margin: 20px 0;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 16px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    section {
+        width: 100%;
+        margin: 15px 0;
+        padding: 18px;
+    }
+
+    section h2 {
+        font-size: 24px;
+    }
+
+    section > p:first-of-type {
+        margin: 20px 0;
+    }
+
+    input,
+    select,
+    textarea {
+        width: 100%;
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 13px;
+    }
+
+    /* Tables: fit text instead of forcing horizontal scroll */
+    table {
+        width: 100%;
+        table-layout: fixed;
+        margin-bottom: 18px;
+    }
+
+    th,
+    td {
+        padding: 6px 3px;
+        font-size: 11px;
+        white-space: normal;
+        overflow-wrap: anywhere;
+        word-break: normal;
+    }
+
+    th {
+        font-size: 11px;
+    }
+
+    .class-box {
+        padding: 10px;
+    }
+
+    .class-box p {
+        padding: 12px 0;
+    }
+}
+
+/* =====================================
+   VERY SMALL PHONES
+===================================== */
+
+@media (max-width: 380px) {
+    body {
+        padding: 7px;
+    }
+
+    .main {
+        padding: 10px 2px;
+    }
+
+    .sidebar {
+        padding: 7px;
+    }
+
+    .sidebar a {
+        padding: 8px;
+        font-size: 13px;
+    }
+
+    section {
+        padding: 14px;
+    }
+
+    .card {
+        padding: 13px;
+    }
+
+    th,
+    td {
+        padding: 4px 2px;
+        font-size: 10px;
+    }
+}
