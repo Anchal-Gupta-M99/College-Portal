@@ -1,9 +1,8 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Smart College Portal</title>
 
     <style>
@@ -11,21 +10,35 @@
             box-sizing: border-box;
         }
 
-        body {
+        html, body {
             margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
             font-family: Arial, sans-serif;
         }
 
         .container {
             display: flex;
+            width: 100%;
             height: 100vh;
+            height: 100dvh;
+            overflow: hidden;
         }
 
         .sidebar {
             width: 240px;
+            min-width: 240px;
             background: #1e3155;
-            padding: 20px;
+            padding: 20px 12px;
             flex-shrink: 0;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            color: white;
+            font-size: 22px;
+            margin: 0 8px 20px;
         }
 
         .sidebar a {
@@ -42,27 +55,84 @@
         }
 
         iframe {
+            display: block;
             flex: 1;
-            width: 0;
+            min-width: 0;
+            width: 100%;
             height: 100%;
             border: none;
+            background: #f1f5f9;
+        }
+
+        /* Mobile layout */
+        @media (max-width: 650px) {
+            .container {
+                flex-direction: column;
+                overflow: hidden;
+            }
+
+            .sidebar {
+                width: 100%;
+                min-width: 0;
+                flex-shrink: 0;
+                padding: 12px;
+                overflow: visible;
+            }
+
+            .sidebar h2 {
+                font-size: 20px;
+                margin: 0 4px 10px;
+            }
+
+            .sidebar nav {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 6px;
+            }
+
+            .sidebar a {
+                display: inline-block;
+                padding: 9px 10px;
+                margin: 0;
+                font-size: 14px;
+                background: #294269;
+            }
+
+            iframe {
+                flex: 1;
+                width: 100%;
+                min-height: 0;
+            }
+        }
+
+        /* Very small phones */
+        @media (max-width: 380px) {
+            .sidebar {
+                padding: 8px;
+            }
+
+            .sidebar a {
+                padding: 8px;
+                font-size: 12px;
+            }
         }
     </style>
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-<body>
 
+<body>
     <div class="container">
 
         <aside class="sidebar">
-            <h2 style="color:white;">College Portal</h2>
+            <h2>College Portal</h2>
 
-            <a href="dashboard.html" target="content">Dashboard</a>
-            <a href="attendance.html" target="content">Attendance</a>
-            <a href="timetable.html" target="content">Timetable</a>
-            <a href="assignments.html" target="content">Assignments</a>
-            <a href="notices.html" target="content">Notices</a>
-            <a href="events.html" target="content">Events</a>
+            <nav>
+                <a href="dashboard.html" target="content">Dashboard</a>
+                <a href="attendance.html" target="content">Attendance</a>
+                <a href="timetable.html" target="content">Timetable</a>
+                <a href="assignments.html" target="content">Assignments</a>
+                <a href="notices.html" target="content">Notices</a>
+                <a href="events.html" target="content">Events</a>
+            </nav>
         </aside>
 
         <iframe
@@ -72,6 +142,5 @@
         </iframe>
 
     </div>
-
 </body>
 </html>
